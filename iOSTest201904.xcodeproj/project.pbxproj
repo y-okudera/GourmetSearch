@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		646CD9C1226AA7D1002DAD61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CD9C0226AA7D1002DAD61 /* AppDelegate.swift */; };
-		646CD9C3226AA7D1002DAD61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CD9C2226AA7D1002DAD61 /* ViewController.swift */; };
-		646CD9C6226AA7D2002DAD61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646CD9C4226AA7D2002DAD61 /* Main.storyboard */; };
 		646CD9C8226AA7D3002DAD61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 646CD9C7226AA7D3002DAD61 /* Assets.xcassets */; };
 		646CD9CB226AA7D3002DAD61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646CD9C9226AA7D3002DAD61 /* LaunchScreen.storyboard */; };
 		646CD9D6226AA7D4002DAD61 /* iOSTest201904Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CD9D5226AA7D4002DAD61 /* iOSTest201904Tests.swift */; };
@@ -19,6 +17,23 @@
 		646CD9F6226AA98F002DAD61 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646CD9F1226AA98F002DAD61 /* RealmSwift.framework */; };
 		646CD9F7226AA98F002DAD61 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646CD9F2226AA98F002DAD61 /* NVActivityIndicatorView.framework */; };
 		646CD9F8226AA98F002DAD61 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646CD9F3226AA98F002DAD61 /* Realm.framework */; };
+		646CDA01226AAB11002DAD61 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA00226AAB11002DAD61 /* LocationService.swift */; };
+		646CDA03226AAB23002DAD61 /* LocationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA02226AAB23002DAD61 /* LocationServiceDelegate.swift */; };
+		646CDA06226AABE6002DAD61 /* UIViewController+OpenSettingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA05226AABE6002DAD61 /* UIViewController+OpenSettingApp.swift */; };
+		646CDA0A226AAD44002DAD61 /* RestaurantSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA09226AAD44002DAD61 /* RestaurantSearchViewController.swift */; };
+		646CDA0D226AAD7B002DAD61 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA0C226AAD7B002DAD61 /* BaseView.swift */; };
+		646CDA0F226AADA4002DAD61 /* UIViewController+NVActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA0E226AADA4002DAD61 /* UIViewController+NVActivityIndicatorView.swift */; };
+		646CDA11226AADCA002DAD61 /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA10226AADCA002DAD61 /* AlertBuilder.swift */; };
+		646CDA13226AADDA002DAD61 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA12226AADDA002DAD61 /* Constants.swift */; };
+		646CDA15226AADF0002DAD61 /* DebugPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA14226AADF0002DAD61 /* DebugPrint.swift */; };
+		646CDA17226AAE08002DAD61 /* RealmDaoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA16226AAE08002DAD61 /* RealmDaoHelper.swift */; };
+		646CDA19226AAE7A002DAD61 /* RealmInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA18226AAE7A002DAD61 /* RealmInitializer.swift */; };
+		646CDA1B226AAE8B002DAD61 /* RealmInitializeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA1A226AAE8B002DAD61 /* RealmInitializeService.swift */; };
+		646CDA22226AAF34002DAD61 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA1D226AAF34002DAD61 /* APIClient.swift */; };
+		646CDA25226AAF34002DAD61 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA20226AAF34002DAD61 /* APIRequest.swift */; };
+		646CDA28226AB026002DAD61 /* RestaurantSearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646CDA27226AB026002DAD61 /* RestaurantSearchViewController.storyboard */; };
+		646CDA2C226AB071002DAD61 /* RestaurantSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA2B226AB071002DAD61 /* RestaurantSearchPresenter.swift */; };
+		646CDA2E226AB0AE002DAD61 /* RestaurantSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA2D226AB0AE002DAD61 /* RestaurantSearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +56,6 @@
 /* Begin PBXFileReference section */
 		646CD9BD226AA7D1002DAD61 /* iOSTest201904.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTest201904.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		646CD9C0226AA7D1002DAD61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		646CD9C2226AA7D1002DAD61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		646CD9C5226AA7D2002DAD61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		646CD9C7226AA7D3002DAD61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		646CD9CA226AA7D3002DAD61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		646CD9CC226AA7D3002DAD61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +70,23 @@
 		646CD9F1226AA98F002DAD61 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		646CD9F2226AA98F002DAD61 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
 		646CD9F3226AA98F002DAD61 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		646CDA00226AAB11002DAD61 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		646CDA02226AAB23002DAD61 /* LocationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceDelegate.swift; sourceTree = "<group>"; };
+		646CDA05226AABE6002DAD61 /* UIViewController+OpenSettingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+OpenSettingApp.swift"; sourceTree = "<group>"; };
+		646CDA09226AAD44002DAD61 /* RestaurantSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSearchViewController.swift; sourceTree = "<group>"; };
+		646CDA0C226AAD7B002DAD61 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		646CDA0E226AADA4002DAD61 /* UIViewController+NVActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NVActivityIndicatorView.swift"; sourceTree = "<group>"; };
+		646CDA10226AADCA002DAD61 /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
+		646CDA12226AADDA002DAD61 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		646CDA14226AADF0002DAD61 /* DebugPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugPrint.swift; sourceTree = "<group>"; };
+		646CDA16226AAE08002DAD61 /* RealmDaoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDaoHelper.swift; sourceTree = "<group>"; };
+		646CDA18226AAE7A002DAD61 /* RealmInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmInitializer.swift; sourceTree = "<group>"; };
+		646CDA1A226AAE8B002DAD61 /* RealmInitializeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmInitializeService.swift; sourceTree = "<group>"; };
+		646CDA1D226AAF34002DAD61 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		646CDA20226AAF34002DAD61 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		646CDA27226AB026002DAD61 /* RestaurantSearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestaurantSearchViewController.storyboard; sourceTree = "<group>"; };
+		646CDA2B226AB071002DAD61 /* RestaurantSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSearchPresenter.swift; sourceTree = "<group>"; };
+		646CDA2D226AB0AE002DAD61 /* RestaurantSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,12 +143,12 @@
 		646CD9BF226AA7D1002DAD61 /* iOSTest201904 */ = {
 			isa = PBXGroup;
 			children = (
-				646CD9C0226AA7D1002DAD61 /* AppDelegate.swift */,
-				646CD9C2226AA7D1002DAD61 /* ViewController.swift */,
-				646CD9C4226AA7D2002DAD61 /* Main.storyboard */,
-				646CD9C7226AA7D3002DAD61 /* Assets.xcassets */,
-				646CD9C9226AA7D3002DAD61 /* LaunchScreen.storyboard */,
-				646CD9CC226AA7D3002DAD61 /* Info.plist */,
+				646CD9FA226AAA7F002DAD61 /* Extensions */,
+				646CD9FE226AAAB5002DAD61 /* Helpers */,
+				646CD9FB226AAA87002DAD61 /* Models */,
+				646CD9FF226AAABE002DAD61 /* Others */,
+				646CD9FD226AAA90002DAD61 /* Presenters */,
+				646CD9FC226AAA8C002DAD61 /* Views */,
 			);
 			path = iOSTest201904;
 			sourceTree = "<group>";
@@ -151,6 +181,125 @@
 				646CD9F1226AA98F002DAD61 /* RealmSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		646CD9FA226AAA7F002DAD61 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				646CDA04226AABD2002DAD61 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		646CD9FB226AAA87002DAD61 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		646CD9FC226AAA8C002DAD61 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				646CDA0B226AAD6C002DAD61 /* Protocol */,
+				646CDA07226AAD2C002DAD61 /* Screens */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		646CD9FD226AAA90002DAD61 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				646CDA29226AB05D002DAD61 /* Screens */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		646CD9FE226AAAB5002DAD61 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				646CDA10226AADCA002DAD61 /* AlertBuilder.swift */,
+				646CDA1D226AAF34002DAD61 /* APIClient.swift */,
+				646CDA20226AAF34002DAD61 /* APIRequest.swift */,
+				646CDA12226AADDA002DAD61 /* Constants.swift */,
+				646CDA14226AADF0002DAD61 /* DebugPrint.swift */,
+				646CDA00226AAB11002DAD61 /* LocationService.swift */,
+				646CDA02226AAB23002DAD61 /* LocationServiceDelegate.swift */,
+				646CDA16226AAE08002DAD61 /* RealmDaoHelper.swift */,
+				646CDA18226AAE7A002DAD61 /* RealmInitializer.swift */,
+				646CDA1A226AAE8B002DAD61 /* RealmInitializeService.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		646CD9FF226AAABE002DAD61 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				646CD9C0226AA7D1002DAD61 /* AppDelegate.swift */,
+				646CD9C7226AA7D3002DAD61 /* Assets.xcassets */,
+				646CD9CC226AA7D3002DAD61 /* Info.plist */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		646CDA04226AABD2002DAD61 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				646CDA05226AABE6002DAD61 /* UIViewController+OpenSettingApp.swift */,
+				646CDA0E226AADA4002DAD61 /* UIViewController+NVActivityIndicatorView.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		646CDA07226AAD2C002DAD61 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				646CDA26226AB00F002DAD61 /* Launch */,
+				646CDA08226AAD35002DAD61 /* RestaurantSearch */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		646CDA08226AAD35002DAD61 /* RestaurantSearch */ = {
+			isa = PBXGroup;
+			children = (
+				646CDA09226AAD44002DAD61 /* RestaurantSearchViewController.swift */,
+				646CDA27226AB026002DAD61 /* RestaurantSearchViewController.storyboard */,
+				646CDA2D226AB0AE002DAD61 /* RestaurantSearchView.swift */,
+			);
+			path = RestaurantSearch;
+			sourceTree = "<group>";
+		};
+		646CDA0B226AAD6C002DAD61 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				646CDA0C226AAD7B002DAD61 /* BaseView.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		646CDA26226AB00F002DAD61 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				646CD9C9226AA7D3002DAD61 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		646CDA29226AB05D002DAD61 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				646CDA2A226AB067002DAD61 /* RestaurantSearch */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		646CDA2A226AB067002DAD61 /* RestaurantSearch */ = {
+			isa = PBXGroup;
+			children = (
+				646CDA2B226AB071002DAD61 /* RestaurantSearchPresenter.swift */,
+			);
+			path = RestaurantSearch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +409,7 @@
 			files = (
 				646CD9CB226AA7D3002DAD61 /* LaunchScreen.storyboard in Resources */,
 				646CD9C8226AA7D3002DAD61 /* Assets.xcassets in Resources */,
-				646CD9C6226AA7D2002DAD61 /* Main.storyboard in Resources */,
+				646CDA28226AB026002DAD61 /* RestaurantSearchViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,8 +460,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				646CD9C3226AA7D1002DAD61 /* ViewController.swift in Sources */,
+				646CDA19226AAE7A002DAD61 /* RealmInitializer.swift in Sources */,
+				646CDA2C226AB071002DAD61 /* RestaurantSearchPresenter.swift in Sources */,
+				646CDA11226AADCA002DAD61 /* AlertBuilder.swift in Sources */,
+				646CDA22226AAF34002DAD61 /* APIClient.swift in Sources */,
+				646CDA06226AABE6002DAD61 /* UIViewController+OpenSettingApp.swift in Sources */,
+				646CDA0F226AADA4002DAD61 /* UIViewController+NVActivityIndicatorView.swift in Sources */,
+				646CDA25226AAF34002DAD61 /* APIRequest.swift in Sources */,
+				646CDA03226AAB23002DAD61 /* LocationServiceDelegate.swift in Sources */,
+				646CDA13226AADDA002DAD61 /* Constants.swift in Sources */,
+				646CDA1B226AAE8B002DAD61 /* RealmInitializeService.swift in Sources */,
+				646CDA01226AAB11002DAD61 /* LocationService.swift in Sources */,
+				646CDA0D226AAD7B002DAD61 /* BaseView.swift in Sources */,
+				646CDA17226AAE08002DAD61 /* RealmDaoHelper.swift in Sources */,
 				646CD9C1226AA7D1002DAD61 /* AppDelegate.swift in Sources */,
+				646CDA0A226AAD44002DAD61 /* RestaurantSearchViewController.swift in Sources */,
+				646CDA2E226AB0AE002DAD61 /* RestaurantSearchView.swift in Sources */,
+				646CDA15226AADF0002DAD61 /* DebugPrint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,14 +512,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		646CD9C4226AA7D2002DAD61 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				646CD9C5226AA7D2002DAD61 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		646CD9C9226AA7D3002DAD61 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -493,7 +649,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = iOSTest201904/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/iOSTest201904/Others/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -501,7 +658,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.iOSTest201904";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -515,7 +672,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = iOSTest201904/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/iOSTest201904/Others/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -523,7 +681,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.iOSTest201904";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
