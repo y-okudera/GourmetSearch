@@ -25,6 +25,7 @@ final class RestaurantSearchViewController: UIViewController {
     @IBOutlet private weak var openingLabel: UILabel!
     @IBOutlet private weak var accessLabel: UILabel!
     
+    private var genre: Genre?
     private var shops = [Shop]()
     private var selectedShop: Shop?
     
@@ -54,7 +55,14 @@ final class RestaurantSearchViewController: UIViewController {
 extension RestaurantSearchViewController {
     
     @IBAction func didTapSearch(_ sender: UIButton) {
-        print(debug: "")
+        guard let genre = self.genre else {
+            return
+        }
+        presenter.requestGourmetSearch(
+            genre: genre,
+            currentLat: mapView.userLocation.coordinate.latitude,
+            currentLng: mapView.userLocation.coordinate.longitude
+        )
     }
     
     @IBAction func didTapToCurrent(_ sender: UIButton) {
@@ -64,6 +72,15 @@ extension RestaurantSearchViewController {
         region.center = mapView.userLocation.coordinate
         
         mapView.setRegion(region, animated: true)
+    }
+    
+    @IBAction func didTapShopName(_ sender: UITapGestureRecognizer) {
+        guard let urlString = selectedShop?.urls.pc else {
+            return
+        }
+        let name = selectedShop?.name ?? ""
+        let vc = RestaurantDetailViewController.instance(name: name, baseURL: urlString)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -118,8 +135,8 @@ extension RestaurantSearchViewController: RestaurantSearchView {
     }
     
     private func setShopLocation() {
-//        storeDetailView.isHidden = true
-//        selectedStore = nil
+        detailView.isHidden = true
+        selectedShop = nil
         
         mapView.removeAnnotations(mapView.annotations)
         
@@ -141,12 +158,8 @@ extension RestaurantSearchViewController: RestaurantSearchView {
 extension RestaurantSearchViewController: GenreListDelegate {
     func selected(genre: Genre) {
         print(debug: "\(genre)")
+        self.genre = genre
         searchField.text = genre.name
-        presenter.requestGourmetSearch(
-            genre: genre,
-            currentLat: mapView.userLocation.coordinate.latitude,
-            currentLng: mapView.userLocation.coordinate.longitude
-        )
     }
 }
 
@@ -218,6 +231,7 @@ extension RestaurantSearchViewController: MKMapViewDelegate {
     
     private func setShopDetail(shop: Shop) {
         shopNameLabel.text = shop.name
+        // TODO: - 徒歩の時間をセットする
         accessLabel.text = ""
         openingLabel.text = shop.mobileAccess
     }
