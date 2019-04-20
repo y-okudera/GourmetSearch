@@ -1,0 +1,4 @@
+github "Alamofire/Alamofire" "4.8.2"
+github "ashleymills/Reachability.swift" "v4.3.0"
+github "ninjaprox/NVActivityIndicatorView" "4.6.1"
+github "realm/realm-cocoa" "v3.13.1"
