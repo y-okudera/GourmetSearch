@@ -42,6 +42,7 @@ final class RestaurantSearchViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setup()
+        hideNavigationBarBackTitle()
         navigationController?.isNavigationBarHidden = true
     }
     

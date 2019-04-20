@@ -26,12 +26,12 @@ final class RestaurantDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupWebView()
-        navigationItem.title = self.name
-        hideNavigationBarBackTitle()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationItem.title = self.name
+        hideNavigationBarBackTitle()
         navigationController?.isNavigationBarHidden = false
     }
     
