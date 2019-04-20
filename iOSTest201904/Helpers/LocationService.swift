@@ -133,13 +133,15 @@ extension LocationService: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        if let newLocation = locations.last {
-            if filterLocation(newLocation) {
-                let roundDownLat = newLocation.coordinate.roundDownLat
-                let roundDownLon = newLocation.coordinate.roundDownLon
-                let roundDownLocation = CLLocation(latitude: roundDownLat, longitude: roundDownLon)
-                delegate?.update(coordinate: roundDownLocation.coordinate)
-            }
+        guard let newLocation = locations.last else {
+            return
+        }
+        if filterLocation(newLocation) {
+            let roundDownLocation = CLLocation(
+                latitude: newLocation.coordinate.latitude,
+                longitude: newLocation.coordinate.longitude
+            )
+            delegate?.update(coordinate: roundDownLocation.coordinate)
         }
     }
     
@@ -202,17 +204,5 @@ extension LocationService: CLLocationManagerDelegate {
         // 方位情報を更新する場合は、最終更新日時を更新しない
         
         return true
-    }
-}
-
-extension CLLocationCoordinate2D {
-    var roundDownLat: CLLocationDegrees {
-        let lat = self.latitude * 1_000_000
-        return floor(lat) / 1_000_000
-    }
-    
-    var roundDownLon: CLLocationDegrees {
-        let lon = self.longitude * 1_000_000
-        return floor(lon) / 1_000_000
     }
 }

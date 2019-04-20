@@ -63,7 +63,7 @@ final class APIClient: NSObject {
             completionHandler(.failure(apiError: .invalidRequest))
             return
         }
-        
+        print(debug: "urlRequest: \(urlRequest)")
         Alamofire.request(urlRequest).validate(statusCode: 200 ..< 300).responseData { dataResponse in
             
             // エラーチェック
@@ -107,16 +107,8 @@ extension APIClient {
     /// デコード
     private static func decode<T: APIRequest>(responseData: Data, request: T) -> APIResult {
         if let object = request.decode(data: responseData) {
-            print(debug: "レスポンス:\n\(object)")
+            print(debug: "レスポンス:\(object)")
             return .success(object: object)
-            
-            // エラーレスポンスをデコード
-        } else if let errorObject = request.decodeErrorResponse(data: responseData) {
-            print(debug: "エラーレスポンス:\n\(errorObject)")
-            dump(errorObject)
-            return .failure(apiError: .errorResponse(errObject: errorObject))
-            
-            // デコード失敗
         } else {
             print(debug: "デコード失敗")
             return .failure(apiError: .decodeError)

@@ -19,10 +19,7 @@ final class RealmDaoHelper <T: RealmSwift.Object> {
             realm.invalidate()
         }
         
-        let realmConfiguration = Realm.Configuration(
-            fileURL: RealmDaoHelper.fileURL(),
-            encryptionKey: RealmDaoHelper.encryptionKey()
-        )
+        let realmConfiguration = Realm.Configuration(fileURL: RealmDaoHelper.fileURL())
         let realmInitializer = RealmInitializer(configuration: realmConfiguration)
         self.realm = realmInitializer.initializeRealm()
         print(debug: Realm.Configuration.defaultConfiguration.fileURL ?? "")
@@ -185,23 +182,6 @@ final class RealmDaoHelper <T: RealmSwift.Object> {
 }
 
 extension RealmDaoHelper {
-    
-    /// 暗号化キーを取得する
-    ///
-    /// - Returns: 暗号化キー
-    private static func encryptionKey() -> Data? {
-        let keyString = "uXKBXxpFdeY7TcpJPq1h4PPV9P9bj2h3pmP7WH1JuTKAZ8G5Fmd84cC57IluoUmc"
-        let keyData = keyString.data(using: .utf8, allowLossyConversion: false)
-        
-        #if DEBUG
-        if let data = keyData {
-            print(debug: "Realm encryptionKey: \(data.map { String(format: "%.2hhx", $0) }.joined())")
-        }
-        #endif
-        
-        return keyData
-    }
-    
     /// RealmファイルのURLを取得する
     private static func fileURL() -> URL? {
         guard let documentDirectory = NSSearchPathForDirectoriesInDomains(

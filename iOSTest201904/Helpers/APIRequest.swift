@@ -12,7 +12,6 @@ import Alamofire
 protocol APIRequest {
     
     associatedtype Response: Decodable
-    associatedtype APIErrorResponse: Decodable
     
     var baseURL: URL { get }
     var method: HTTPMethod { get }
@@ -21,7 +20,6 @@ protocol APIRequest {
     var httpHeaderFields: [String: String] { get }
     
     func decode(data: Data) -> Response?
-    func decodeErrorResponse(data: Data) -> APIErrorResponse?
     
     /// URLRequestを生成する
     func makeURLRequest(needURLEncoding: Bool) -> URLRequest?
@@ -31,7 +29,7 @@ protocol APIRequest {
 extension APIRequest {
     
     var baseURL: URL {
-        guard let url = URL(string: "https://example.com") else {
+        guard let url = URL(string: "https://webservice.recruit.co.jp/hotpepper") else {
             fatalError("baseURL is nil.")
         }
         return url
@@ -54,19 +52,13 @@ extension APIRequest {
     }
     
     func decode(data: Data) -> Response? {
+        
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         do {
-            return try JSONDecoder().decode(Response.self, from: data)
+            return try decoder.decode(Response.self, from: data)
         } catch {
             print(debug: "Response decode error:\(error)")
-            return nil
-        }
-    }
-    
-    func decodeErrorResponse(data: Data) -> APIErrorResponse? {
-        do {
-            return try JSONDecoder().decode(APIErrorResponse.self, from: data)
-        } catch {
-            print(debug: "ErrorResponse decode error:\(error)")
             return nil
         }
     }

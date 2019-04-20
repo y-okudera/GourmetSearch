@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>現在地周辺の飲食店を検索するために使用します。GPSの利用を許可しますか？</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>現在地周辺の飲食店を検索するために使用します。GPSの利用を許可しますか？</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>現在地周辺の飲食店を検索するために使用します。GPSの利用を許可しますか？</string>
 	<key>CFBundleDisplayName</key>
 	<string>グルメサーチ</string>
 	<key>CFBundleDevelopmentRegion</key>

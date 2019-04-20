@@ -20,10 +20,7 @@ extension UIViewController {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
-    func showAppSettingAlert(presenting viewController: UIViewController?) {
-        guard let viewController = viewController else {
-            return
-        }
+    func openAppSettingAlert() {
         let alert = UIAlertController(
             title: "",
             message: "位置情報が許可されていません。\n設定アプリに移動して、位置情報を許可しますか？",
@@ -35,6 +32,6 @@ extension UIViewController {
         let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
         alert.addAction(okAction)
         alert.addAction(cancelAction)
-        viewController.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 }

@@ -10,4 +10,5 @@ import UIKit
 
 protocol RestaurantSearchView: BaseView {
     
+    func didFinishGettingShops(shops: [Shop])
 }

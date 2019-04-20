@@ -34,6 +34,17 @@
 		646CDA28226AB026002DAD61 /* RestaurantSearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646CDA27226AB026002DAD61 /* RestaurantSearchViewController.storyboard */; };
 		646CDA2C226AB071002DAD61 /* RestaurantSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA2B226AB071002DAD61 /* RestaurantSearchPresenter.swift */; };
 		646CDA2E226AB0AE002DAD61 /* RestaurantSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA2D226AB0AE002DAD61 /* RestaurantSearchView.swift */; };
+		646CDA30226AB29A002DAD61 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 646CDA2F226AB29A002DAD61 /* Localizable.strings */; };
+		646CDA34226AB4E6002DAD61 /* GourmetSearchAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA33226AB4E6002DAD61 /* GourmetSearchAPIRequest.swift */; };
+		646CDA36226AB65A002DAD61 /* GourmetSearchAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA35226AB65A002DAD61 /* GourmetSearchAPIResponse.swift */; };
+		646CDA39226AB80C002DAD61 /* GenreAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA38226AB80C002DAD61 /* GenreAPIRequest.swift */; };
+		646CDA3B226AB815002DAD61 /* GenreAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA3A226AB815002DAD61 /* GenreAPIResponse.swift */; };
+		646CDA3E226AC98E002DAD61 /* GenreSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA3D226AC98E002DAD61 /* GenreSelectViewController.swift */; };
+		646CDA42226AC9AA002DAD61 /* GenreSelectViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646CDA41226AC9AA002DAD61 /* GenreSelectViewController.storyboard */; };
+		646CDA44226ACC52002DAD61 /* ViewControllerInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646CDA43226ACC52002DAD61 /* ViewControllerInstantiatable.swift */; };
+		64D43D78226ADD49009430C6 /* GenreDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D43D77226ADD49009430C6 /* GenreDao.swift */; };
+		64D43D7B226ADFBA009430C6 /* List+ConformToCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D43D7A226ADFBA009430C6 /* List+ConformToCodable.swift */; };
+		64D43D7D226AE539009430C6 /* GenreListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D43D7C226AE539009430C6 /* GenreListProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +98,17 @@
 		646CDA27226AB026002DAD61 /* RestaurantSearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestaurantSearchViewController.storyboard; sourceTree = "<group>"; };
 		646CDA2B226AB071002DAD61 /* RestaurantSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSearchPresenter.swift; sourceTree = "<group>"; };
 		646CDA2D226AB0AE002DAD61 /* RestaurantSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSearchView.swift; sourceTree = "<group>"; };
+		646CDA2F226AB29A002DAD61 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		646CDA33226AB4E6002DAD61 /* GourmetSearchAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetSearchAPIRequest.swift; sourceTree = "<group>"; };
+		646CDA35226AB65A002DAD61 /* GourmetSearchAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetSearchAPIResponse.swift; sourceTree = "<group>"; };
+		646CDA38226AB80C002DAD61 /* GenreAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreAPIRequest.swift; sourceTree = "<group>"; };
+		646CDA3A226AB815002DAD61 /* GenreAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreAPIResponse.swift; sourceTree = "<group>"; };
+		646CDA3D226AC98E002DAD61 /* GenreSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreSelectViewController.swift; sourceTree = "<group>"; };
+		646CDA41226AC9AA002DAD61 /* GenreSelectViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GenreSelectViewController.storyboard; sourceTree = "<group>"; };
+		646CDA43226ACC52002DAD61 /* ViewControllerInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInstantiatable.swift; sourceTree = "<group>"; };
+		64D43D77226ADD49009430C6 /* GenreDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreDao.swift; sourceTree = "<group>"; };
+		64D43D7A226ADFBA009430C6 /* List+ConformToCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "List+ConformToCodable.swift"; sourceTree = "<group>"; };
+		64D43D7C226AE539009430C6 /* GenreListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreListProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +208,7 @@
 		646CD9FA226AAA7F002DAD61 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				64D43D79226ADFB5009430C6 /* OSS */,
 				646CDA04226AABD2002DAD61 /* UIKit */,
 			);
 			path = Extensions;
@@ -194,6 +217,8 @@
 		646CD9FB226AAA87002DAD61 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				64D43D75226ADD32009430C6 /* DB */,
+				646CDA31226AB4BA002DAD61 /* API */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -238,6 +263,7 @@
 				646CD9C0226AA7D1002DAD61 /* AppDelegate.swift */,
 				646CD9C7226AA7D3002DAD61 /* Assets.xcassets */,
 				646CD9CC226AA7D3002DAD61 /* Info.plist */,
+				646CDA2F226AB29A002DAD61 /* Localizable.strings */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -254,6 +280,7 @@
 		646CDA07226AAD2C002DAD61 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				646CDA3C226AC96D002DAD61 /* GenreSelect */,
 				646CDA26226AB00F002DAD61 /* Launch */,
 				646CDA08226AAD35002DAD61 /* RestaurantSearch */,
 			);
@@ -274,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				646CDA0C226AAD7B002DAD61 /* BaseView.swift */,
+				646CDA43226ACC52002DAD61 /* ViewControllerInstantiatable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -300,6 +328,67 @@
 				646CDA2B226AB071002DAD61 /* RestaurantSearchPresenter.swift */,
 			);
 			path = RestaurantSearch;
+			sourceTree = "<group>";
+		};
+		646CDA31226AB4BA002DAD61 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				646CDA37226AB7EC002DAD61 /* Genre */,
+				646CDA32226AB4C2002DAD61 /* GourmetSearch */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		646CDA32226AB4C2002DAD61 /* GourmetSearch */ = {
+			isa = PBXGroup;
+			children = (
+				646CDA33226AB4E6002DAD61 /* GourmetSearchAPIRequest.swift */,
+				646CDA35226AB65A002DAD61 /* GourmetSearchAPIResponse.swift */,
+			);
+			path = GourmetSearch;
+			sourceTree = "<group>";
+		};
+		646CDA37226AB7EC002DAD61 /* Genre */ = {
+			isa = PBXGroup;
+			children = (
+				646CDA38226AB80C002DAD61 /* GenreAPIRequest.swift */,
+				646CDA3A226AB815002DAD61 /* GenreAPIResponse.swift */,
+			);
+			path = Genre;
+			sourceTree = "<group>";
+		};
+		646CDA3C226AC96D002DAD61 /* GenreSelect */ = {
+			isa = PBXGroup;
+			children = (
+				646CDA3D226AC98E002DAD61 /* GenreSelectViewController.swift */,
+				646CDA41226AC9AA002DAD61 /* GenreSelectViewController.storyboard */,
+				64D43D7C226AE539009430C6 /* GenreListProvider.swift */,
+			);
+			path = GenreSelect;
+			sourceTree = "<group>";
+		};
+		64D43D75226ADD32009430C6 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				64D43D76226ADD37009430C6 /* Genre */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		64D43D76226ADD37009430C6 /* Genre */ = {
+			isa = PBXGroup;
+			children = (
+				64D43D77226ADD49009430C6 /* GenreDao.swift */,
+			);
+			path = Genre;
+			sourceTree = "<group>";
+		};
+		64D43D79226ADFB5009430C6 /* OSS */ = {
+			isa = PBXGroup;
+			children = (
+				64D43D7A226ADFBA009430C6 /* List+ConformToCodable.swift */,
+			);
+			path = OSS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +497,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				646CD9CB226AA7D3002DAD61 /* LaunchScreen.storyboard in Resources */,
+				646CDA30226AB29A002DAD61 /* Localizable.strings in Resources */,
+				646CDA42226AC9AA002DAD61 /* GenreSelectViewController.storyboard in Resources */,
 				646CD9C8226AA7D3002DAD61 /* Assets.xcassets in Resources */,
 				646CDA28226AB026002DAD61 /* RestaurantSearchViewController.storyboard in Resources */,
 			);
@@ -464,18 +555,27 @@
 				646CDA2C226AB071002DAD61 /* RestaurantSearchPresenter.swift in Sources */,
 				646CDA11226AADCA002DAD61 /* AlertBuilder.swift in Sources */,
 				646CDA22226AAF34002DAD61 /* APIClient.swift in Sources */,
+				646CDA3B226AB815002DAD61 /* GenreAPIResponse.swift in Sources */,
 				646CDA06226AABE6002DAD61 /* UIViewController+OpenSettingApp.swift in Sources */,
+				646CDA3E226AC98E002DAD61 /* GenreSelectViewController.swift in Sources */,
+				646CDA36226AB65A002DAD61 /* GourmetSearchAPIResponse.swift in Sources */,
 				646CDA0F226AADA4002DAD61 /* UIViewController+NVActivityIndicatorView.swift in Sources */,
+				646CDA34226AB4E6002DAD61 /* GourmetSearchAPIRequest.swift in Sources */,
+				646CDA39226AB80C002DAD61 /* GenreAPIRequest.swift in Sources */,
 				646CDA25226AAF34002DAD61 /* APIRequest.swift in Sources */,
 				646CDA03226AAB23002DAD61 /* LocationServiceDelegate.swift in Sources */,
 				646CDA13226AADDA002DAD61 /* Constants.swift in Sources */,
 				646CDA1B226AAE8B002DAD61 /* RealmInitializeService.swift in Sources */,
 				646CDA01226AAB11002DAD61 /* LocationService.swift in Sources */,
+				646CDA44226ACC52002DAD61 /* ViewControllerInstantiatable.swift in Sources */,
 				646CDA0D226AAD7B002DAD61 /* BaseView.swift in Sources */,
+				64D43D7D226AE539009430C6 /* GenreListProvider.swift in Sources */,
 				646CDA17226AAE08002DAD61 /* RealmDaoHelper.swift in Sources */,
 				646CD9C1226AA7D1002DAD61 /* AppDelegate.swift in Sources */,
 				646CDA0A226AAD44002DAD61 /* RestaurantSearchViewController.swift in Sources */,
 				646CDA2E226AB0AE002DAD61 /* RestaurantSearchView.swift in Sources */,
+				64D43D7B226ADFBA009430C6 /* List+ConformToCodable.swift in Sources */,
+				64D43D78226ADD49009430C6 /* GenreDao.swift in Sources */,
 				646CDA15226AADF0002DAD61 /* DebugPrint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,11 @@ import Foundation
 
 /// 定数
 struct Constants {
-    static let dbName = "restaurantSearch.realm"
+    struct Hotpepper {
+        static let apiKey = "65d8725723ef2c21"
+    }
+    static let dbName = "restaurant_search.realm"
+    
+    // MARK: - ジャンル指定画面
+    static let genreCellIdentifier = "GenreCell"
 }
-

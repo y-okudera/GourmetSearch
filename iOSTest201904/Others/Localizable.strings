@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  iOSTest201904
+
+  Created by YukiOkudera on 2019/04/20.
+  Copyright © 2019 Yuki Okudera. All rights reserved.
+*/
+
+// MARK: - Alert
+"OK" = "OK";
+"Cancel" = "キャンセル";
+
+"NO_STORE_MSG" = "現在地周辺に該当店舗はありません。条件を変更してもう一度お試しください。";
+"UNKNOWN_OPENING_HOURS" = "店舗までお問い合わせください";
