@@ -131,8 +131,22 @@ extension RestaurantSearchViewController {
 extension RestaurantSearchViewController: RestaurantSearchView {
     
     func didFinishGettingShops(shops: [Shop]) {
+        
         self.shops = shops
         setShopLocation()
+        
+        if shops.isEmpty {
+            showAlert()
+        }
+    }
+    
+    private func showAlert() {
+        let alert = UIAlertController(title: "",
+                                      message: NSLocalizedString("NO_STORE_MSG", comment: ""),
+                                      preferredStyle: .alert)
+        let okAction = UIAlertAction.init(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
     }
     
     private func setShopLocation() {
